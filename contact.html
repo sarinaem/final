@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>contact</title>
+    <style>
+        
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+
+
+.box-line {
+  border: 1px solid #466dfa;
+  width: 20%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+
+}
+
+.contact-title {
+    font-family: IRANSans;
+    font-weight: 600;
+    color: #000;
+}
+
+.contact-title:hover {
+    color: #466dfa;
+    font-weight: 600;
+    font-family: IRANSans;
+}
+
+.form-model {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding: 2px; 
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+
+.form-model input {
+  margin-top: 20px;
+  border: 1px solid #a2a2a2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 10px;
+  width: 400px;
+  height: 40px;
+  padding: 2px;
+  
+}
+.form-model label {
+    margin-right: 8px;
+}
+
+
+#message {
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+
+
+.button-form {
+ width: 150px;
+  background: #466dfa;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 24px;
+  align-items: flex-start;
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+
+}
+
+
+h3 {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .contact-text {
+    position: relative;
+    bottom: 26px;
+    left: 23px;
+}
+
+    </style>
+</head>
+<body>
+    <section class = "contact">
+	
+		<h2 class="contact-title">ارتباط با ما</h2>
+    <hr class="box-line" />
+    <form action="" class="form-model">
+      <div>
+        <label for="">نام و نام خانوادگی</label>
+        <input type="text" placeholder=" mina rezaei" />
+      </div>
+      <br>
+      <div>
+        <label for="">شماره تماس</label>
+        <input type="tel" />
+      </div>
+      <br>
+      <div>
+        <label for="">متن پیام:</label>
+        <input type="text" id="message" />
+      </div>
+      <button class="button-form" id="buttonForm" type="submit" onclick="sendMessage()">ارسال پیام</button>
+    </form>
+    <h3>شماره پشتیبانی: 021000000</h3>
+	</section>
+    
+</body>
+</html>

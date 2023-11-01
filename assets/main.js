@@ -1,33 +1,30 @@
+// let myList = document.createElement("ul");
+//     myList.classList.add("my-list");
+//     let listItem1 = document.createElement("li");
+//     listItem1.classList.add("listpoint")
+//     listItem1.textContent = "صفحه نخست";
+//     myList.appendChild(listItem1);
+//     let listItem2 = document.createElement("li");
+//     listItem2.classList.add("listpoint")
 
-     
- let myList = document.createElement("ul");
-    myList.classList.add("my-list");
-    let listItem1 = document.createElement("li");
-    listItem1.classList.add("listpoint")
-    listItem1.textContent = "صفحه نخست";
-    myList.appendChild(listItem1);
-    let listItem2 = document.createElement("li");
-    listItem2.classList.add("listpoint")
+//     listItem2.textContent = "تماس با ما";
+//     myList.appendChild(listItem2);
 
-    listItem2.textContent = "تماس با ما";
-    myList.appendChild(listItem2);
+//     let listItem3 = document.createElement("li");
+//     listItem3.classList.add("listpoint")
 
-    let listItem3 = document.createElement("li");
-    listItem3.classList.add("listpoint")
-
-    listItem3.textContent = " درباره ما";
-    myList.appendChild(listItem3);
-    let listItem4 = document.createElement("li");
-    listItem4.classList.add("listpoint")
-
-    listItem4.textContent = "راهنمای سایت";
-    myList.appendChild(listItem4);
-    let parentElement = document.getElementById("myParentElement");
-    parentElement.appendChild(myList);
+//     listItem3.textContent = " درباره ما";
+//     myList.appendChild(listItem3);
+//     let listItem4 = document.createElement("li");
+//     listItem4.classList.add("listpoint")
+//     listItem4.textContent = "راهنمای سایت";
+//     myList.appendChild(listItem4);
+//     let parentElement = document.getElementById("myParentElement");
+//     parentElement.appendChild(myList);
 
 
     function showRegisterForm() {
-      window.open("http://127.0.0.1:5500/assets/index1.html", "_blank");
+      window.open("http://127.0.0.1:5500/index1.html", "_blank");
     }
 
     function sendMessage() {
@@ -89,12 +86,13 @@ if (isRegistered) {
   loginForm.style.display = 'block';
   registerForm.style.display = 'none';
 } else {
+  let isRegistered = true;
   loginForm.style.display = 'none';
   registerForm.style.display = 'block';
 }
 
 loginLink.addEventListener('click', function() {
-  console.log("salam");
+  
   loginForm.style.display = 'block';
   registerForm.style.display = 'none';
 });
