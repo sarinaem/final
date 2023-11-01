@@ -22,7 +22,10 @@
 //     let parentElement = document.getElementById("myParentElement");
 //     parentElement.appendChild(myList);
 
+  function contact(){
+    window.open("http://127.0.0.1:5500/contact.html", "_blank");
 
+  }
     function showRegisterForm() {
       window.open("http://127.0.0.1:5500/index1.html", "_blank");
     }
