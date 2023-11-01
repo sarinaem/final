@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Renthouse</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-right">
+            <div class="logo-site">
+                <img src="assets/img/logo.png" alt="logo-amanj" class="image-site"/>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="جستجو ...">
+                <button>مشاهده نتایج
+                    <i class="fa-solid fa-magnifying-glass" style="color: #466dfa;"></i>                </button>
+                </div>
+            <div id="myParentElement">
+             <!-- <ul id="listHeader">
+                    <li class="home">صفحه نخست</li>
+                     <li class="search">جستجو</li>
+                    <li class="about-us">ارتباط با ما</li>
+                    <li class="contact-us">تماس با ما</li>  -->
+                 <!-- </ul>  -->
+            </div>
+        </div>
+            <div class="log">
+                <button class="login-register" id="loginRegister" onclick="showRegisterForm()">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span class="textloginRegister">ورود / ثبت نام</span>
+                     <!-- <div id="register-form" class="formItem" style="display: none;">
+                        <input type="text" required placeholder="نام خود را وارد کنید">
+                        <input type="text" required placeholder="نام خانوادگی خود را وارد کنید">
+                        <input type="email" placeholder="آدرس ایمیل خود را وارد کنید">
+                        <input type="number" required placeholder="شماره موبایل خود را وارد کنید">
+                        <input type="submit" value="ثبت‌نام">
+
+                    </div>  -->
+
+                </button>
+                <button id="record" class="record">ثبت آگهی</button>
+
+                <!-- login and register -->
+            </div>
+        </header>
+            <div class="slider">
+                <div class="slides">
+                  <div class="slide">
+                    <img src="assets/img/nnnnn.png" alt="rent-house">
+                  </div>
+                  <div class="slide">
+                    <img src="assets/img/rent-house-1.png" alt="rent-house">
+                  </div>
+                  <div class="slide">
+                    <img src="assets/img/rent-house-2.png" alt="rent-house">
+                  </div>
+                </div>
+                <a class="prev" onclick="slidePrev()">&#10094;</a>
+                <a class="next" onclick="slideNext()">&#10095;</a>
+              </div>
+    <div class="footer">
+        <div class="row">
+        <div class="first-footer">
+            <img src="assets/img/logo.png" class="logo-site">
+            <div>
+                <ul class="footerlist">
+                    <li class="footer-address">آدرس: نارمک، نرسیده به میدان هفت حوض جنب رستوران لاله</li>
+                    <li class="footer-address">شماره پشتیبانی: 021000000</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="second-footer">
+            <h3>اجاره خانه</h3>
+            <hr class="hrclass">
+            <br>
+
+            <ul class="footerList guid">
+                <li class="list-guid" id="listGuid">اجاره ویلا</li>
+                <li class="list-guid" id="listGuid">اجاره آپارتمان</li>
+                <li class="list-guid" id="listGuid">اجاره مغازه</li>
+                <li class="list-guid" id="listGuid">اجاره سوییت</li>
+            </ul>
+        </div>
+        <div class="last-footer">
+            <h3>خدمات مشتریان</h3>
+            <hr class="hrclass">
+            <ul class="service-customer">
+                <li class="list-guid" id="listGuid">قوانین و مقررات</li>
+                <li class="list-guid" id="listGuid">پرسش و پاسخ</li>
+                <li class="list-guid" id="listGuid">راهنمای سایت</li>
+                <li class="list-guid" id="listGuid">ثبت شکایت</li>
+
+            </ul>
+        </div>
+        <div class="namad">
+            <img src="assets/img/logo (1).png" alt="samandehi" class="samandehiicon" class="enamad" />
+            <img src="assets/img/samandehi-6e2b448a.png" alt="samandehi" class="samandehiicon" />
+
+
+        </div>
+        </div>
+        <hr class="hrclass" />
+        <div class="bottom">
+            <p>کلیه حقوق این سایت محفوظ و متعلق به سارینا عمادی است</p>
+        </div>
+    </div>
+    <!-- about us and contact -->
+    <div class="about" id="about">
+        <div class="about-us" id="aboutUs">
+            <h3></h3>
+        </div>
+    </div>
+    <script src="assets/main.js"></script>
+
+</body>
+</html>

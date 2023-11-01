@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>login/register</title>
+<style media="screen">
+    *,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #FCFCFC;
+}
+.background{
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+}
+.background {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+form{
+  height: 520px;
+  width: 400px;
+  background-color: #343434;
+  border: 1px solid #000000;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(176, 168, 239, 0.6);
+  padding: 50px 35px;
+}
+form *{
+  font-family: IRANSans;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3{
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+  font-family: IRANSans;
+
+}
+
+
+
+label{
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+input{
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+::placeholder{
+  color: #000000;
+}
+button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #3e6bff;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loginpage label {
+    font-family: IRANSans;
+}
+.box-line {
+  border: 1px solid #466dfa;
+  position: absolute;
+  left: 129px;    
+  width: 136px;   
+    margin: 9px;
+}
+.loginpage input , button {
+    font-family: IRANSans;
+
+}
+
+p{
+    font-family: IRANSans;
+    font-size: 12px;
+    padding: 20px;
+    margin-left: 50px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    color: #000000; 
+}
+  </style>
+  
+</head>
+<body>
+
+  <form class="loginpage" id="login-form">
+      <h3> ورود</h3>
+      <hr class="box-line" />
+
+      <label for="username">نام کاربری:</label>
+      <input class="inputlogin" type="text" placeholder="شماره موبایل یا ایمیل" id="username">
+
+      <label for="password">رمز عبور</label>
+      <input  class="inputlogin" type="password" placeholder="رمز عبور" id="password">
+
+      <button onclick="sendMessage()">ورود</button>
+      <p>حساب کاربری ندارید؟ <a href="#">ثبت‌نام</a></p>
+
+  </form>
+
+  <div class="form-register" id="register-form">
+    <h3> ثبت‌نام</h3>
+      <hr class="box-line" />
+    <div>
+      <label for="username">نام و نام خانوادگی:</label>
+      <input class="inputlogin" type="text" placeholder="مینا رضایی" id="username">
+    </div>
+    <div>
+      <label for="email">آدرس ایمیل: </label>
+      <input class="inputlogin" type="email" placeholder="test@test.com" id="email">
+    </div>
+    <div>
+      <label for="number">شماره تماس: </label>
+      <input class="inputlogin" type="number" placeholder="09123123123" id="number">
+    </div>
+    <div>
+      <label for="password">رمز عبور</label>
+      <input class="inputlogin" type="password" placeholder="رمز عبور" id="password">
+    </div>
+  
+      <button onclick="registerbutton()">ثبت‌نام</button>
+      <p>قبلا ثبت‌نام کرده‌ام. <a href="#">ورود</a></p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
