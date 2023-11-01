@@ -30,7 +30,23 @@ body{
   border-radius: 50%;
 }
 
-form{
+
+.form-register {
+  width: 400px;
+  height: 700px;
+  background-color: #343434;
+  border: 1px solid #000000;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(176, 168, 239, 0.6);
+  padding: 50px 35px;
+}
+
+form {
   height: 520px;
   width: 400px;
   background-color: #343434;
@@ -44,14 +60,14 @@ form{
   box-shadow: 0 0 40px rgba(176, 168, 239, 0.6);
   padding: 50px 35px;
 }
-form *{
+form * , .form-register *{
   font-family: IRANSans;
   color: #ffffff;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
-form h3{
+form h3 , .form-register h3{
   font-size: 30px;
   font-weight: 500;
   line-height: 42px;
@@ -60,7 +76,9 @@ form h3{
 
 }
 
-
+/* .body {
+  overflow: hidden;
+} */
 
 label{
   display: block;
@@ -94,7 +112,7 @@ button {
   cursor: pointer;
 }
 
-.loginpage label {
+.loginpage label , .form-register label {
     font-family: IRANSans;
 }
 .box-line {
@@ -104,7 +122,7 @@ button {
   width: 136px;   
     margin: 9px;
 }
-.loginpage input , button {
+.loginpage input , .form-register input , button {
     font-family: IRANSans;
 
 }
@@ -122,10 +140,11 @@ form textarea {
     color: #000000; 
 }
 
+.form-register input,
+.form-register textarea {
+    color: #000000; 
+}
 
-/* .form-register {
-  visibility: hidden;
-} */
   </style>
   
 </head>
@@ -145,7 +164,7 @@ form textarea {
 
 </form>
 
-<div class="form-register hidden" id="register-form">
+<form class="form-register" id="register-form">
   <h3> ثبت‌نام</h3>
     <hr class="box-line" />
   <div>
@@ -158,16 +177,16 @@ form textarea {
   </div>
   <div>
     <label for="number">شماره تماس: </label>
-    <input class="inputlogin" type="number" placeholder="09123123123" id="number">
+    <input class="inputlogin" type="tel" placeholder="09123123123" id="number">
   </div>
   <div>
     <label for="password">رمز عبور</label>
-    <input class="inputlogin" type="password" placeholder="رمز عبور" id="password">
+    <input class="inputlogin" type="password" placeholder="رمز عبور" id="password2">
   </div>
 
-    <button onclick="registerbutton()">ثبت‌نام</button>
+    <button>ثبت‌نام</button>
     <p class="loginlink" id="loginLink">قبلا ثبت‌نام کرده‌ام. <a href="#">ورود</a></p>
-</div>
+</form>
   <script src="main.js"></script>
 </body>
 </html>

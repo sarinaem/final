@@ -35,6 +35,10 @@
 
     }
 
+    function registerbutton() {
+      window.open("http://127.0.0.1:5500/index.html", "_blank");
+    }
+
     const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
@@ -76,21 +80,28 @@ function slideNext() {
 
 setInterval(slideNext, 4000);
 
-document.addEventListener('event', function() {
-  const registerLink = document.getElementById('registerlink');
-  const loginLink = document.getElementById('loginLink');
-  const registerForm = document.getElementById('register-form');
-  const loginForm = document.getElementById('login-form');
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
+const loginLink = document.getElementById('loginLink');
+const registerLink = document.getElementById('registerlink');
+let isRegistered = false;
+if (isRegistered) {
+  loginForm.style.display = 'block';
+  registerForm.style.display = 'none';
+} else {
+  loginForm.style.display = 'none';
+  registerForm.style.display = 'block';
+}
 
-  registerLink.addEventListener('click', function() {
-    loginForm.style.display = 'none';
-    registerForm.style.display = 'block';
-  });
+loginLink.addEventListener('click', function() {
+  console.log("salam");
+  loginForm.style.display = 'block';
+  registerForm.style.display = 'none';
+});
 
-  loginLink.addEventListener('click', function() {
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
-  });
+registerLink.addEventListener('click', function() {
+  loginForm.style.display = 'none';
+  registerForm.style.display = 'block';
 });
 
 const house = [
@@ -129,21 +140,3 @@ const house = [
   }
 ]
 
-
-
-let searchInput = document.getElementById('search-input');
-let searchButton = document.getElementById('search-button');
-searchButton.addEventListener('click' , function(){
-  let searchTerm = searchInput.value;
-  performSearch(searchTerm);
-});
-searchInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    let searchTerm = searchInput.value;
-    performSearch(searchTerm);
-  }
-});
-
-function performSearch(searchTerm) {
-  console.log('جستجو برای: ', searchTerm);
-}
