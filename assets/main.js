@@ -76,18 +76,23 @@ function slideNext() {
 
 setInterval(slideNext, 4000);
 
-document.addEventListener('DOMContentLoaded', function() {
-  const registerButton = document.getElementById('registerbutton');
+document.addEventListener('event', function() {
+  const registerLink = document.getElementById('registerlink');
+  const loginLink = document.getElementById('loginLink');
   const registerForm = document.getElementById('register-form');
   const loginForm = document.getElementById('login-form');
 
-  registerButton.addEventListener('click', function() {
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
-  
+  registerLink.addEventListener('click', function() {
+    loginForm.style.display = 'none';
+    registerForm.style.display = 'block';
   });
 
+  loginLink.addEventListener('click', function() {
+    loginForm.style.display = 'block';
+    registerForm.style.display = 'none';
+  });
 });
+
 const house = [
   {
     image: "home1.webp",
