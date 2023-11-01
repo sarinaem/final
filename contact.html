@@ -113,8 +113,51 @@ h3 {
     </style>
 </head>
 <body>
+    <header class="header">
+        <div class="header-right">
+        
+            
+                <div class="logo-site">
+                    <img src="assets/img/logo.png" alt="logo-amanj" class="image-site"/>
+                </div>
+                <div id="myParentElement">
+                    <ul id="listHeader">
+                        <li class="home list-style">
+                            <a href="http://127.0.0.1:5500/index.html">صفحه نخست</a>
+                        </li>
+                         <li class="search list-style">
+                            <a href="#">جستجو</a>
+                        </li>
+                        <li class="about-us list-style" onclick="about()"> 
+                            <a href="aboutUs.html"> درباره ما</a>
+                        </li>
+                        <li class="contact-us list-style" onclick="contact()">
+                            <a href="contact.html"> تماس با ما</a>
+
+                        </li>
+                     </ul> 
+            </div>
+        </div>
+            <div class="log">
+                <button class="login-register" id="loginRegister" onclick="showRegisterForm()">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span class="textloginRegister">ورود / ثبت نام</span>
+                     <!-- <div id="register-form" class="formItem" style="display: none;">
+                        <input type="text" required placeholder="نام خود را وارد کنید">
+                        <input type="text" required placeholder="نام خانوادگی خود را وارد کنید">
+                        <input type="email" placeholder="آدرس ایمیل خود را وارد کنید">
+                        <input type="number" required placeholder="شماره موبایل خود را وارد کنید">
+                        <input type="submit" value="ثبت‌نام">
+
+                    </div>  -->
+
+                </button>
+                <button id="record" class="record">ثبت آگهی</button>
+
+                <!-- login and register -->
+            </div>
+        </header>
     <section class = "contact">
-	
 		<h2 class="contact-title">ارتباط با ما</h2>
     <hr class="box-line" />
     <form action="" class="form-model">

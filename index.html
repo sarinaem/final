@@ -18,12 +18,22 @@
                 </div>
                 <div id="myParentElement">
                     <ul id="listHeader">
-                        <li class="home list-style">صفحه نخست</li>
-                         <li class="search list-style">جستجو</li>
-                        <li class="about-us list-style"> درباره ما</li>
-                        <li class="contact-us list-style" onclick="contact()">تماس با ما</li>
-                     </ul> 
+                        <li class="home list-style">
+                            <a href="http://127.0.0.1:5500/index.html">صفحه نخست</a>
+                        </li>
+                         <li class="search list-style">
+                            <a href="#">جستجو</a>
+                        </li>
+                        <li class="about-us list-style" onclick="about()"> 
+                            <a href="aboutUs.html"> درباره ما</a>
+                        </li>
+                        <li class="contact-us list-style" id="about-li" onclick="contact()">
+                            <a href="contact.html"> تماس با ما</a>
+
+                        </li>
+                    </ul> 
             </div>
+            
         </div>
             <div class="log">
                 <button class="login-register" id="loginRegister" onclick="showRegisterForm()">

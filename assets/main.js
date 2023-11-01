@@ -22,10 +22,6 @@
 //     let parentElement = document.getElementById("myParentElement");
 //     parentElement.appendChild(myList);
 
-  function contact(){
-    window.open("http://127.0.0.1:5500/contact.html", "_blank");
-
-  }
     function showRegisterForm() {
       window.open("http://127.0.0.1:5500/index1.html", "_blank");
     }
@@ -103,6 +99,17 @@ loginLink.addEventListener('click', function() {
 registerLink.addEventListener('click', function() {
   loginForm.style.display = 'none';
   registerForm.style.display = 'block';
+});
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  let aboutLi = document.getElementById('about-li');
+  let iframe = document.createElement('iframe');
+  iframe.src = 'aboutUs.html';
+  iframe.width = '100%';
+  iframe.height = '600';
+  aboutLi.appendChild(iframe);
+
 });
 
 const house = [
