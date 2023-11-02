@@ -380,6 +380,19 @@ li.linkFooter:hover {
     background-color: #3e6bff;
   }
 
+  span.view-all {
+    position: absolute;
+    left: 0px;
+    margin: -6px;
+    padding: 1px;
+    left: 93px;
+}
+
+i.fa-solid.fa-angle-left {
+    position: absolute;
+    left: 71px;
+}
+
 
   .last-footer .hrclass{
     margin-bottom: 20px;
@@ -423,6 +436,7 @@ li.linkFooter:hover {
     right: 25px;
 }
 
+
 .text-link {
   color: #3e6bff;
   text-decoration: none;
@@ -434,7 +448,7 @@ li.linkFooter:hover {
 
 .products-house {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   margin-top: 10px;
   align-items: center;
   border-radius: 10px;
@@ -442,11 +456,35 @@ li.linkFooter:hover {
 
 .image-box {
   margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  border-radius: 10px;
 }
 .view-all {
   border-radius: 10px;
   margin-top: 15px;
 }
+
+
+.imagebox-detail {
+  background-color: #f0f0f0;
+  width: 20%;
+}
+
+
+.right-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 
 
 

@@ -1,37 +1,53 @@
 
 const products = [
     {
-        image: "home1.webp",
-        city: "Tehran",
+        image: "img/origin.jpg",
+        city: "شهر: تهران",
         Name: "خانه ویلایی ",
-        price: 50000000,
-        sellerName: "mina jafari",
-        description: "دو اتاق خوابه، دارای پارکینگ، ۱۲۰ متر زیربنا، غیر دربست، دارای سرویس بهداشتی فرنگی و ایرانی"
+        price: "قیمت: ۲ میلیون و ۴۰۰ هزار تومان ",
+        sellerName: "نام فروشنده: مینا جعفری",
+        description: "توضیحات: دو اتاق خوابه، دارای پارکینگ، ۱۲۰ متر زیربنا، غیر دربست، دارای سرویس بهداشتی فرنگی و ایرانی"
       },
     {
-      image: "house1.png",
-      city: "kordan",
+      image: "img/product.png",
+      city: "منطقه: کردان",
       Name: "ویلای سه‌خوابه استخردار",
-      price: 1600000,
-      sellerName: "abbas akbari",
-      description: "بدون اتاق خواب، یک تخت دو نفره، مبل تخت‌شو، استخر و دارای پارکینگ"
+      price: "قیمت: ۱ میلیون ",
+      sellerName: "نام فروشنده؛ اکبر خسروی",
+      description: "توضیحات: دارای سرویس بهداشتی فرنگی و ایرانی، بدون پارکینگ، ۲ اتاق خوابه، آسانسور، جکوزی"
     },
     {
-      image: "house2.webp",
-      city: "rasht",
+      image: "img/product4.png",
+      city: "شهر: رشت",
       Name: "خانه دوبلکس کوچک",
-      price: 10000000,
-      sellerName: "mina jafari",
-      description: "دو طبقه، دربست، ۲ اتاق خواب مجزا، اینترنت، پارکینگ، سیستم سرمایشی، لوازم سرو غذا، حداکثر ۱۰ نفر"
+      price: "قیمت: ۲ میلیون و ۵۰۰ هزار تومان",
+      sellerName: "نام فروشنده: رضوان محمودی",
+      description: "توضیحات: دو طبقه، دربست، ۲ اتاق خواب مجزا، اینترنت، پارکینگ، سیستم سرمایشی، لوازم سرو غذا، حداکثر ۱۰ نفر"
     },
   
     {
-      image: "house8.jpeg",
-      city: "amol",
+      image: "img/product.png",
+      city: "شهر: ساری",
       Name: "خانه ساحلی ",
-      price: 50000000,
-      sellerName: "mina jafari",
-      description: "نزدیک دریا، پارکینگ، بدون اتاق خواب"
+      price: "قیمت: ۹۰۰ هزار تومان ",
+      sellerName: "نام فروشنده: مینا رضوی",
+      description: "توضیحات: نزدیک دریا، ۲ اتاق خوابه، غیر دربست"
+    },
+    {
+      image: "img/product.png",
+      city: "شهر: یاسوج",
+      Name: "خانه ویلایی",
+      price: "قیمت: ۵۰۰ هزار تومان ",
+      sellerName: "نام فروشنده: محمد کویری",
+      description: "توضیحات: ۱ اتاق خواب، دارای پارکینگ، اینترنت، تاب و سرسره در حیاط کوچک خانه"
+    },
+    {
+      image: "img/product.png",
+      city: "شهر: تهران",
+      Name: "آپارتمان ۴۰ متری",
+      price: "قیمت: شبی ۱ میلیون تومان   ",
+      sellerName: "نام فروشنده: محمد کویری",
+      description: "توضیحات: دسترسی آسان به مترو و خدمات شهری، بدون آسانسور، طبقه ۲‌ام"
     }
   ]
 
@@ -53,8 +69,8 @@ const products = [
 
     const produDescription = document.createElement ("div");
     produDescription.setAttribute ("class" , "description");
-    const productButton = document.createElement ("div")
-    productButton.setAttribute ("class" , "button");
+    const productButton = document.createElement ("button");
+   
 
   
 
@@ -64,6 +80,7 @@ const products = [
     productSellerName.textContent = product.sellerName;
     productCity.textContent = product.city;
     produDescription.textContent = product.description;
+    productButton.textContent = "اجاره می‌کنم...";
 
     productItem.appendChild(productName);
     productItem.appendChild(productPrice);
@@ -71,9 +88,14 @@ const products = [
     productItem.appendChild(productCity);
     productItem.appendChild(produDescription);
 
-    if (products.image) {
-        const productsImage = document.createElement("img");        productsImage.setAttribute ("src" , "image/${product.image}");
-        productItem.appendChild (productsImage);
-    }
+    if (product.image) {
+      const productImage = document.createElement("img");
+      productImage.setAttribute("src", "img/"+"product.image");
+       productItem.appendChild(productImage);
+  }
     productsDiv.appendChild(productItem);
+  
+    productItem.appendChild(productButton);
+    productButton.setAttribute ("class" , "button");
+  
   })
