@@ -112,39 +112,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 });
 
-const house = [
-  {
-    image: "home1.webp",
-    city: "Tehran",
-    title: "خانه ویلایی ",
-    price: 50000000,
-    sellerName: "mina jafari",
-    description: "دو اتاق خوابه، دارای پارکینگ، ۱۲۰ متر زیربنا، غیر دربست، دارای سرویس بهداشتی فرنگی و ایرانی"
-  },
-  {
-    image: "house1.png",
-    city: "kordan",
-    title: "ویلای سه‌خوابه استخردار",
-    price: 1600000,
-    sellerName: "abbas akbari",
-    description: "بدون اتاق خواب، یک تخت دو نفره، مبل تخت‌شو، استخر و دارای پارکینگ"
-  },
-  {
-    image: "house2.webp",
-    city: "rasht",
-    title: "خانه دوبلکس کوچک",
-    price: 10000000,
-    sellerName: "mina jafari",
-    description: "دو طبقه، دربست، ۲ اتاق خواب مجزا، اینترنت، پارکینگ، سیستم سرمایشی، لوازم سرو غذا، حداکثر ۱۰ نفر"
-  },
 
-  {
-    image: "house8.jpeg",
-    city: "amol",
-    title: "خانه ساحلی ",
-    price: 50000000,
-    sellerName: "mina jafari",
-    description: "نزدیک دریا، پارکینگ، بدون اتاق خواب"
-  }
-]
+function about(event) {
+  event.preventDefault();
+  let linkURL = event.target.getAttribute("href");
+  window.open("http://127.0.0.1:5500/aboutUs.html", "_blank");
 
+}

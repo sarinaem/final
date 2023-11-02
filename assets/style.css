@@ -399,14 +399,69 @@ li.linkFooter:hover {
     top: 19px;
     width: 70px;
 }
-  
 
 
 
 
 
 
-/* @media only screen and (max-width: 375px) { 
 
-  }
+
+
+
+
+.container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 10px;
+}
+
+.title-home {
+    position: absolute;
+    top: 72%;
+    right: 25px;
+}
+
+.text-link {
+  color: #3e6bff;
+  text-decoration: none;
+}
+
+.icon {
+  margin-right: 7px;
+}
+
+.products-house {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.image-box {
+  margin-right: 10px;
+}
+.view-all {
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+
+
+/* .product-image {
+  border-radius: 10px;
+  text-align: right;
 } */
+
+@media only screen and (max-width: 375px) { 
+  .listHeader {
+    display: none;
+  }
+
+  .login-register {
+    display: none;
+  }
+  
+}

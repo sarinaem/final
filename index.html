@@ -11,18 +11,16 @@
 <body>
     <header class="header">
         <div class="header-right">
-        
-            
                 <div class="logo-site">
                     <img src="assets/img/logo.png" alt="logo-amanj" class="image-site"/>
                 </div>
                 <div id="myParentElement">
                     <ul id="listHeader">
                         <li class="home list-style">
-                            <a href="http://127.0.0.1:5500/index.html">صفحه نخست</a>
+                            <a href="http://127.0.0.1:5500/index.html" onclick="home()">صفحه نخست</a>
                         </li>
-                         <li class="search list-style">
-                            <a href="#">جستجو</a>
+                         <li class="search list-style" onclick="rent()">
+                            <a href="rent.html">اجاره</a>
                         </li>
                         <li class="about-us list-style" onclick="about()"> 
                             <a href="aboutUs.html"> درباره ما</a>
@@ -35,50 +33,71 @@
             </div>
             
         </div>
-            <div class="log">
-                <button class="login-register" id="loginRegister" onclick="showRegisterForm()">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                    <span class="textloginRegister">ورود / ثبت نام</span>
-                     <!-- <div id="register-form" class="formItem" style="display: none;">
-                        <input type="text" required placeholder="نام خود را وارد کنید">
-                        <input type="text" required placeholder="نام خانوادگی خود را وارد کنید">
-                        <input type="email" placeholder="آدرس ایمیل خود را وارد کنید">
-                        <input type="number" required placeholder="شماره موبایل خود را وارد کنید">
-                        <input type="submit" value="ثبت‌نام">
-
-                    </div>  -->
-
-                </button>
-                <button id="record" class="record">ثبت آگهی</button>
+        <div class="log">
+            <button class="login-register" id="loginRegister" onclick="showRegisterForm()">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                <span class="textloginRegister">ورود / ثبت نام</span>
+            </button>
+            <button id="record" class="record">ثبت آگهی</button>
 
                 <!-- login and register -->
-            </div>
-        </header>
+        </div>
+    </header>
         <div class="search-box">
             <input type="text" placeholder="جستجو ...">
             <button>مشاهده نتایج
                 <i class="fa-solid fa-magnifying-glass" style="color: #466dfa;"></i>                </button>
-            </div>
+        </div>
         <div class="search-box">
                 <input type="text" placeholder="جستجو ...">
                 <button>مشاهده نتایج
                     <i class="fa-solid fa-magnifying-glass" style="color: #466dfa;"></i>                </button>
-                </div>
-            <div class="slider">
-                <div class="slides">
-                  <div class="slide">
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
                     <img src="assets/img/nnnnn.png" alt="rent-house">
-                  </div>
-                  <div class="slide">
-                    <img src="assets/img/rent-house-1.png" alt="rent-house">
-                  </div>
-                  <div class="slide">
-                    <img src="assets/img/rent-house-2.png" alt="rent-house">
-                  </div>
                 </div>
+                <div class="slide">
+                    <img src="assets/img/rent-house-1.png" alt="rent-house">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/rent-house-2.png" alt="rent-house">
+                </div>
+            </div>
                 <a class="prev" onclick="slidePrev()">&#10094;</a>
                 <a class="next" onclick="slideNext()">&#10095;</a>
               </div>
+        <div class="container">
+            <div class="title-home">
+                <h2>جدیدترین خانه‌های اجاره‌ای</h2>
+                <hr class="hrclass renthr">
+            </div>
+                <a class="text-link" href="#">
+                <span class="view-all">مشاهده همه</span>
+                <i class="fa-solid fa-angle-left" style="color: #466dfa;"></i>   
+                </a>
+                <div class="products-house">
+                    <div class="image-box">
+                        <img src="assets/img/product.png" alt="" class="product-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="assets/img/product-1.png" alt="" class="product-image" />
+
+                    </div>
+                    <div class="image-box">
+                        <img src="assets/img/product4.png" alt="" class="product-image" />
+
+                    </div>
+                    <div class="image-box">
+                        <img src="assets/img/product-3.png" alt="" class="product-image" />
+
+                    </div>
+                  </div>
+            
+            
+        </div>
+
     <div class="footer">
         <div class="row">
         <div class="first-footer">
@@ -127,13 +146,6 @@
 
         </div>
     </div>
-    <!-- about us and contact -->
-    <div class="about" id="about">
-        <div class="about-us" id="aboutUs">
-            <h3></h3>
-        </div>
-    </div>
     <script src="assets/main.js"></script>
-
 </body>
 </html>
