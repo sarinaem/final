@@ -1,57 +1,56 @@
 
 const products = [
     {
-        image: "img/origin.jpg",
+        image: "assets/img/origin.jpg",
         city: "شهر: تهران",
         Name: "خانه ویلایی ",
         price: "قیمت: ۲ میلیون و ۴۰۰ هزار تومان ",
         sellerName: "نام فروشنده: مینا جعفری",
-        description: "توضیحات: دو اتاق خوابه، دارای پارکینگ، ۱۲۰ متر زیربنا، غیر دربست، دارای سرویس بهداشتی فرنگی و ایرانی"
+        // description: "توضیحات: دو اتاق خوابه، دارای پارکینگ، ۱۲۰ متر زیربنا، غیر دربست، دارای سرویس بهداشتی فرنگی و ایرانی"
       },
     {
-      image: "img/product.png",
+      image: "assets/img/origin.jpg",
       city: "منطقه: کردان",
       Name: "ویلای سه‌خوابه استخردار",
       price: "قیمت: ۱ میلیون ",
       sellerName: "نام فروشنده؛ اکبر خسروی",
-      description: "توضیحات: دارای سرویس بهداشتی فرنگی و ایرانی، بدون پارکینگ، ۲ اتاق خوابه، آسانسور، جکوزی"
+      // description: "توضیحات: دارای سرویس بهداشتی فرنگی و ایرانی، بدون پارکینگ، ۲ اتاق خوابه، آسانسور، جکوزی"
     },
     {
-      image: "img/product4.png",
+      image: "assets/img/origin.jpg",
       city: "شهر: رشت",
       Name: "خانه دوبلکس کوچک",
       price: "قیمت: ۲ میلیون و ۵۰۰ هزار تومان",
       sellerName: "نام فروشنده: رضوان محمودی",
-      description: "توضیحات: دو طبقه، دربست، ۲ اتاق خواب مجزا، اینترنت، پارکینگ، سیستم سرمایشی، لوازم سرو غذا، حداکثر ۱۰ نفر"
+      // description: "توضیحات: دو طبقه، دربست، ۲ اتاق خواب مجزا، اینترنت، پارکینگ، سیستم سرمایشی، لوازم سرو غذا، حداکثر ۱۰ نفر"
     },
   
     {
-      image: "img/product.png",
+      image: "assets/img/origin.jpg",
       city: "شهر: ساری",
       Name: "خانه ساحلی ",
       price: "قیمت: ۹۰۰ هزار تومان ",
       sellerName: "نام فروشنده: مینا رضوی",
-      description: "توضیحات: نزدیک دریا، ۲ اتاق خوابه، غیر دربست"
     },
     {
-      image: "img/product.png",
+      image: "assets/img/origin.jpg",
       city: "شهر: یاسوج",
       Name: "خانه ویلایی",
       price: "قیمت: ۵۰۰ هزار تومان ",
       sellerName: "نام فروشنده: محمد کویری",
-      description: "توضیحات: ۱ اتاق خواب، دارای پارکینگ، اینترنت، تاب و سرسره در حیاط کوچک خانه"
+      // description: "توضیحات: ۱ اتاق خواب، دارای پارکینگ، اینترنت، تاب و سرسره در حیاط کوچک خانه"
     },
     {
-      image: "img/product.png",
+      image: "assets/img/origin.jpg",
       city: "شهر: تهران",
       Name: "آپارتمان ۴۰ متری",
       price: "قیمت: شبی ۱ میلیون تومان   ",
       sellerName: "نام فروشنده: محمد کویری",
-      description: "توضیحات: دسترسی آسان به مترو و خدمات شهری، بدون آسانسور، طبقه ۲‌ام"
+      // description: "توضیحات: دسترسی آسان به مترو و خدمات شهری، بدون آسانسور، طبقه ۲‌ام"
     }
   ]
 
-  const productsDiv = document.getElementById ("products")
+  const productsDiv = document.getElementById ("products");
   products.forEach (product => {
     const productItem = document.createElement ("div");
     productItem.setAttribute ("class" , "product");
@@ -60,7 +59,6 @@ const products = [
     productName.setAttribute ("class" , "name");
     const productPrice = document.createElement ("div");
     productPrice.setAttribute ("class" , "price");
-
     const productSellerName = document.createElement ("div");
     productSellerName.setAttribute ("class" , "sellerName");
 
@@ -72,8 +70,6 @@ const products = [
     const productButton = document.createElement ("button");
    
 
-  
-
 
     productName.textContent = product.Name;
     productPrice.textContent = product.price;
@@ -83,16 +79,16 @@ const products = [
     productButton.textContent = "اجاره می‌کنم...";
 
     productItem.appendChild(productName);
+    if (product.image) {
+      const productImage = document.createElement("img");
+      productImage.setAttribute("src", product.image);
+      productItem.appendChild(productImage);
+    }
     productItem.appendChild(productPrice);
     productItem.appendChild(productSellerName);
     productItem.appendChild(productCity);
     productItem.appendChild(produDescription);
-
-    if (product.image) {
-      const productImage = document.createElement("img");
-      productImage.setAttribute("src", "img/"+"product.image");
-       productItem.appendChild(productImage);
-  }
+ 
     productsDiv.appendChild(productItem);
   
     productItem.appendChild(productButton);
